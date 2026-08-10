@@ -1,0 +1,252 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const menuIcon = mobileMenuBtn.querySelector('i');
+
+    function toggleMenu() {
+        mobileMenuOverlay.classList.toggle('active');
+        const isActive = mobileMenuOverlay.classList.contains('active');
+        
+        // Update icon based on state
+        if (isActive) {
+            menuIcon.setAttribute('data-lucide', 'x');
+        } else {
+            menuIcon.setAttribute('data-lucide', 'menu');
+        }
+        lucide.createIcons();
+        
+        // Prevent body scrolling when menu is open
+        document.body.style.overflow = isActive ? 'hidden' : '';
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+
+    // Close menu when a link is clicked
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (mobileMenuOverlay.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+
+    // 2. Sticky Navbar & Active Link Highlighting
+    const navbar = document.querySelector('.navbar');
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        // Sticky Navbar background
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+
+        // Active Link Highlighting
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= (sectionTop - 150)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // 3. Scroll Reveal Animations
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); // Only animate once
+        });
+    }, revealOptions);
+
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // 4. Project Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const categories = card.getAttribute('data-category').split(' ');
+                
+                if (filterValue === 'all' || categories.includes(filterValue)) {
+                    card.classList.remove('hide');
+                    // Small delay to allow display:block to apply before animating opacity if we were using CSS transitions
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 50);
+                } else {
+                    card.classList.add('hide');
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                }
+            });
+        });
+    });
+
+    // 5. Contact Form Validation (Client-side)
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+
+            // Reset previous invalid states
+            [nameInput, emailInput, messageInput].forEach(input => {
+                input.parentElement.classList.remove('invalid');
+            });
+
+            // Validate Name
+            if (!nameInput.value.trim()) {
+                nameInput.parentElement.classList.add('invalid');
+                isValid = false;
+            }
+
+            // Validate Email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+                emailInput.parentElement.classList.add('invalid');
+                isValid = false;
+            }
+
+            // Validate Message
+            if (!messageInput.value.trim()) {
+                messageInput.parentElement.classList.add('invalid');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Simulate form submission
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Sending... <i data-lucide="loader-2" class="spin"></i>';
+                lucide.createIcons();
+
+                setTimeout(() => {
+                    formStatus.textContent = "Thank you! Your message has been sent successfully. (Simulation)";
+                    formStatus.className = "form-status success";
+                    contactForm.reset();
+                    
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                    lucide.createIcons();
+                    
+                    // Clear success message after 5 seconds
+                    setTimeout(() => {
+                        formStatus.textContent = "";
+                    }, 5000);
+                }, 1500);
+            } else {
+                formStatus.textContent = "Please fill out all required fields correctly.";
+                formStatus.className = "form-status error";
+            }
+        });
+    }
+
+    // 6. Initialize tsParticles
+    if (typeof tsParticles !== 'undefined') {
+        tsParticles.load("tsparticles", {
+            fpsLimit: 60,
+            background: {
+                color: {
+                    value: "transparent",
+                },
+            },
+            interactivity: {
+                events: {
+                    onHover: {
+                        enable: true,
+                        mode: "grab",
+                    },
+                    resize: true,
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        links: {
+                            opacity: 0.5,
+                        },
+                    },
+                },
+            },
+            particles: {
+                color: {
+                    value: "#60A5FA",
+                },
+                links: {
+                    color: "#3B82F6",
+                    distance: 150,
+                    enable: true,
+                    opacity: 0.2,
+                    width: 1,
+                },
+                move: {
+                    direction: "none",
+                    enable: true,
+                    outModes: {
+                        default: "bounce",
+                    },
+                    random: false,
+                    speed: 0.8,
+                    straight: false,
+                },
+                number: {
+                    density: {
+                        enable: true,
+                        area: 800,
+                    },
+                    value: 40,
+                },
+                opacity: {
+                    value: 0.3,
+                },
+                shape: {
+                    type: "circle",
+                },
+                size: {
+                    value: { min: 1, max: 2 },
+                },
+            },
+            detectRetina: true,
+        });
+    }
+});
