@@ -34,8 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Sticky Navbar & Active Link Highlighting
     const navbar = document.querySelector('.navbar');
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
 
     window.addEventListener('scroll', () => {
         // Sticky Navbar background
@@ -44,23 +43,19 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             navbar.classList.remove('scrolled');
         }
+    });
 
-        // Active Link Highlighting
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (window.scrollY >= (sectionTop - 150)) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
+    // Active Link Highlighting (URL based)
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        const linkHref = link.getAttribute('href');
+        
+        // Exact match or index.html for empty paths
+        if (linkHref === currentPath || (currentPath === '' && linkHref === 'index.html')) {
+            link.classList.add('active');
+        }
     });
 
     // 3. Scroll Reveal Animations

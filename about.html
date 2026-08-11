@@ -62,42 +62,37 @@
 
     <!-- Main Content -->
     <main>
-        <section id="hero" class="hero">
-            <div class="hero-bg-glow"></div>
-            <div class="container hero-container">
-                <div class="hero-content reveal">
-                    <p class="hero-greeting">Hello, I'm</p>
-                    <h1 class="hero-title text-gradient">Govind Mandal</h1>
-                    <h2 class="hero-subtitle typing-effect">Data Analyst & <span class="highlight">Power BI Developer</span></h2>
-                    <p class="hero-desc">
-                        Empowering businesses through data. Specializing in Data Analytics, Power BI, SQL, and Business Intelligence to drive actionable insights.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary glass-btn">View My Projects</a>
-                        <div class="btn-group">
-                            <a href="assets/Govind_Mandal_Data_Analyst_Resume.pdf" class="btn btn-secondary glass-btn" target="_blank" rel="noopener noreferrer">
-                                <i data-lucide="eye"></i> View Resume
-                            </a>
-                            <a href="assets/Govind_Mandal_Data_Analyst_Resume.pdf" download="Govind_Mandal_Data_Analyst_Resume.pdf" class="btn btn-secondary glass-btn" title="Download Resume">
-                                <i data-lucide="download"></i>
-                            </a>
-                        </div>
-                        <a href="#contact" class="btn btn-tertiary glass-btn">Let's Connect</a>
-                    </div>
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>About Me</h2>
+                    <div class="line"></div>
                 </div>
-                
-                <div class="hero-visual reveal reveal-right">
-                    <div class="hero-image-wrapper">
-                        <div class="pulse-ring"></div>
-                        <img src="assets/profile.jpg" alt="Govind Mandal - Data Analyst" class="hero-profile-img" loading="eager" width="400" height="400">
-                        
-                        <!-- Floating Decorative Cards -->
-                        <div class="floating-card glass-card fc-1">
-                            <i data-lucide="bar-chart-2"></i> Data Insights
+                <div class="about-grid reveal">
+                    <!-- Photo & Profile Card -->
+                    <div class="about-profile">
+                        <div class="profile-photo placeholder-img">
+                            <img src="assets/profile.jpg" alt="Govind Mandal"  style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="photo-fallback" style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; background: var(--bg-card); color: var(--text-muted);">
+                                <i data-lucide="camera" style="width: 48px; height: 48px; opacity: 0.5;"></i>
+                                <span class="sr-only">[Add profile.jpg to assets folder]</span>
+                            </div>
                         </div>
-                        <div class="floating-card glass-card fc-2">
-                            <i data-lucide="pie-chart"></i> Power BI Expert
+                        <div class="profile-card card">
+                            <ul>
+                                <li><i data-lucide="check"></i> Data Analytics</li>
+                                <li><i data-lucide="check"></i> Power BI & DAX</li>
+                                <li><i data-lucide="check"></i> SQL & Databases</li>
+                                <li><i data-lucide="check"></i> Dashboard Development</li>
+                            </ul>
                         </div>
+                    </div>
+                    
+                    <!-- Bio -->
+                    <div class="about-text">
+                        <p>I am a passionate Data Analyst and Power BI Developer who thrives on turning raw, complex data into intuitive, actionable business insights. My expertise lies in designing end-to-end data pipelines, developing comprehensive data models, and creating highly interactive dashboards.</p>
+                        <p>With a strong command of Data Analytics, Power BI, SQL, and Excel, I specialize in Data Visualization and Dashboard Development. I build reporting solutions that empower teams to make informed, data-driven decisions swiftly and confidently.</p>
+                        <p>From writing complex DAX measures and optimizing SQL queries to extracting powerful business insights, I am committed to delivering high-quality, scalable analytics solutions that drive true business value.</p>
                     </div>
                 </div>
             </div>

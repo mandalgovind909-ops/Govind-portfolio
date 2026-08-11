@@ -62,42 +62,48 @@
 
     <!-- Main Content -->
     <main>
-        <section id="hero" class="hero">
-            <div class="hero-bg-glow"></div>
-            <div class="container hero-container">
-                <div class="hero-content reveal">
-                    <p class="hero-greeting">Hello, I'm</p>
-                    <h1 class="hero-title text-gradient">Govind Mandal</h1>
-                    <h2 class="hero-subtitle typing-effect">Data Analyst & <span class="highlight">Power BI Developer</span></h2>
-                    <p class="hero-desc">
-                        Empowering businesses through data. Specializing in Data Analytics, Power BI, SQL, and Business Intelligence to drive actionable insights.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary glass-btn">View My Projects</a>
-                        <div class="btn-group">
-                            <a href="assets/Govind_Mandal_Data_Analyst_Resume.pdf" class="btn btn-secondary glass-btn" target="_blank" rel="noopener noreferrer">
-                                <i data-lucide="eye"></i> View Resume
-                            </a>
-                            <a href="assets/Govind_Mandal_Data_Analyst_Resume.pdf" download="Govind_Mandal_Data_Analyst_Resume.pdf" class="btn btn-secondary glass-btn" title="Download Resume">
-                                <i data-lucide="download"></i>
-                            </a>
-                        </div>
-                        <a href="#contact" class="btn btn-tertiary glass-btn">Let's Connect</a>
-                    </div>
-                </div>
-                
-                <div class="hero-visual reveal reveal-right">
-                    <div class="hero-image-wrapper">
-                        <div class="pulse-ring"></div>
-                        <img src="assets/profile.jpg" alt="Govind Mandal - Data Analyst" class="hero-profile-img" loading="eager" width="400" height="400">
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-wrapper card reveal">
+                    <div class="contact-info">
+                        <h2>Let's Connect</h2>
+                        <p>I am open to discussing new opportunities, analytics projects, or networking. Feel free to reach out via email or connect with me on LinkedIn.</p>
                         
-                        <!-- Floating Decorative Cards -->
-                        <div class="floating-card glass-card fc-1">
-                            <i data-lucide="bar-chart-2"></i> Data Insights
+                        <div class="contact-links">
+                            <a href="#" class="contact-item">
+                                <i data-lucide="mail"></i> Email Me
+                            </a>
+                            <a href="#" class="contact-item">
+                                <i data-lucide="linkedin"></i> LinkedIn
+                            </a>
+                            <a href="#" class="contact-item">
+                                <i data-lucide="github"></i> GitHub
+                            </a>
                         </div>
-                        <div class="floating-card glass-card fc-2">
-                            <i data-lucide="pie-chart"></i> Power BI Expert
-                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your Name">
+                                <span class="error-msg">Please enter your name</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                                <span class="error-msg">Please enter a valid email</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" required placeholder="How can I help you?"></textarea>
+                                <span class="error-msg">Please enter a message</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                Send Message <i data-lucide="send"></i>
+                            </button>
+                            <p class="form-status" id="form-status"></p>
+                        </form>
                     </div>
                 </div>
             </div>
