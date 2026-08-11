@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 lucide.createIcons();
 
                 setTimeout(() => {
-                    formStatus.textContent = "Thank you! Your message has been sent successfully. (Simulation)";
+                    formStatus.textContent = "Thank you! Your message has been sent successfully.";
                     formStatus.className = "form-status success";
                     contactForm.reset();
                     
@@ -242,6 +242,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
             },
             detectRetina: true,
+        });
+    }
+});
+
+// Dashboard Modal Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('dashboardModal');
+    const modalImg = document.getElementById('dashboardModalImg');
+    const closeBtn = document.querySelector('.dashboard-modal-close');
+    const dashboardBtns = document.querySelectorAll('.dashboard-btn');
+
+    if(modal && modalImg && dashboardBtns) {
+        dashboardBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const imgSrc = btn.getAttribute('data-img');
+                if(imgSrc) {
+                    modalImg.src = imgSrc;
+                    modal.classList.add('show');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling under modal
+                }
+            });
+        });
+
+        // Close on clicking X
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close on clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('show')) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
         });
     }
 });

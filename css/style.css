@@ -609,6 +609,12 @@ img {
     animation-delay: -3s;
 }
 
+.fc-3 {
+    top: 70%;
+    left: -15%;
+    animation-delay: -1.5s;
+}
+
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
@@ -1646,4 +1652,274 @@ img {
 
 .resume-bullets li {
     margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   Dashboard Grid Layout (Single Page)
+   ========================================================================== */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    padding: var(--space-xl) 0;
+}
+
+.grid-col-left, .grid-col-right, .grid-col-full {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+@media (min-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(12, 1fr);
+        align-items: start;
+    }
+    
+    .grid-col-left {
+        grid-column: span 7;
+    }
+    
+    .grid-col-right {
+        grid-column: span 5;
+    }
+    
+    .grid-col-full {
+        grid-column: span 12;
+    }
+}
+
+/* ==========================================================================
+   Responsive Overflow Fixes
+   ========================================================================== */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+section, .container, .section, main {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-wrapper {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Ensure grids don't overflow */
+.dashboard-grid, .projects-grid, .showcase-grid, .skills-grid, .about-grid {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Stack grids nicely on mobile screens */
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .grid-col-left, .grid-col-right, .grid-col-full {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .contact-wrapper {
+        grid-template-columns: 1fr !important;
+    }
+}
+.container {
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        padding: 0 !important;
+        gap: 20px !important;
+    }
+}
+
+
+
+/* === FINAL RESPONSIVE FIXES === */
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box !important;
+}
+
+.container, main, section, .section {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+img, video, iframe, svg {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Fix Contact Wrapper */
+.contact-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+}
+
+@media (min-width: 1024px) {
+    .contact-wrapper {
+        flex-direction: row !important;
+    }
+    .contact-info {
+        flex: 1 !important;
+    }
+    .contact-form-wrapper {
+        flex: 1.5 !important;
+    }
+}
+
+/* Fix Dashboard Grids */
+.dashboard-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 20px !important;
+}
+
+@media (min-width: 1024px) {
+    .dashboard-grid {
+        display: grid !important;
+        grid-template-columns: repeat(12, 1fr) !important;
+        gap: 30px !important;
+    }
+    .grid-col-left { grid-column: span 7 !important; }
+    .grid-col-right { grid-column: span 5 !important; }
+    .grid-col-full { grid-column: span 12 !important; }
+}
+
+/* Internal Grids (Showcase, Projects) */
+.showcase-grid, .projects-grid, .skills-grid, .about-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+}
+
+@media (min-width: 768px) {
+    .showcase-grid, .projects-grid, .skills-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .showcase-grid, .projects-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+/* Fix any cards or inputs causing overflow */
+.card, input, textarea, button {
+    max-width: 100% !important;
+}
+
+.hero-title, .hero-subtitle, h1, h2, h3, h4, h5, h6, p {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+}
+
+/* Prevent animations from causing horizontal overflow */
+.reveal-right, .reveal-left { transform: translateY(30px) !important; }
+
+/* Force reveal elements to be visible */
+.reveal, .reveal-left, .reveal-right, .reveal-scale, section, .section, .card {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    height: auto !important;
+    max-height: none !important;
+}
+
+/* Dashboard Modal Styles */
+.dashboard-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dashboard-modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.dashboard-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
+    object-fit: contain;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-modal.show .dashboard-modal-content {
+    transform: scale(1);
+}
+
+.dashboard-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.dashboard-modal-close:hover,
+.dashboard-modal-close:focus {
+    color: var(--accent-blue);
+    text-decoration: none;
+    cursor: pointer;
 }

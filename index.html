@@ -10,8 +10,7 @@
     <meta property="og:title" content="Govind Mandal | Data Analyst & Power BI Developer">
     <meta property="og:description" content="Portfolio of Govind Mandal, a Data Analyst & Power BI Developer specializing in Power BI, SQL, data visualization and business intelligence.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="[Add Canonical URL]">
-    <meta property="og:image" content="[Add OG Image URL]">
+
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,12 +33,12 @@
             <a href="#" class="logo">Govind<span class="dot">.</span></a>
             
             <div class="nav-links">
-                <a href="about.html" class="nav-link">About</a>
-                <a href="skills.html" class="nav-link">Skills</a>
-                <a href="experience.html" class="nav-link">Experience</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="index.html#blog" class="nav-link">Blog</a>
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
 
             <button class="mobile-menu-btn" aria-label="Toggle menu">
@@ -51,25 +50,32 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay">
         <div class="mobile-nav-links">
-            <a href="about.html" class="mobile-nav-link">About</a>
-            <a href="skills.html" class="mobile-nav-link">Skills</a>
-            <a href="experience.html" class="mobile-nav-link">Experience</a>
-            <a href="projects.html" class="mobile-nav-link">Projects</a>
-            <a href="index.html#blog" class="mobile-nav-link">Blog</a>
-            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#skills" class="mobile-nav-link">Skills</a>
+            <a href="#experience" class="mobile-nav-link">Experience</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#blog" class="mobile-nav-link">Blog</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
         </div>
     </div>
 
     <!-- Main Content -->
     <main>
-        <section id="hero" class="hero">
+    <section id="hero" class="hero">
             <div class="hero-bg-glow"></div>
             <div class="container hero-container">
                 <div class="hero-content reveal">
                     <p class="hero-greeting">Hello, I'm</p>
                     <h1 class="hero-title text-gradient">Govind Mandal</h1>
                     <h2 class="hero-subtitle typing-effect">Data Analyst & <span class="highlight">Power BI Developer</span></h2>
-                    <p class="hero-desc">
+                    
+                    <!-- Secondary Branding -->
+                    <div style="margin: 1.5rem 0; padding: 1rem; border-left: 3px solid var(--primary); background: rgba(0, 212, 255, 0.05); border-radius: 0 8px 8px 0;">
+                        <h3 style="color: var(--primary); font-size: 1.1rem; margin: 0 0 5px 0;">Founder & Web Developer — Govind Web Studio</h3>
+                        <p style="margin: 0; font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Building modern, responsive & professional websites for businesses, entrepreneurs and personal brands.</p>
+                    </div>
+
+                    <p class="hero-desc" style="margin-top: 0;">
                         Empowering businesses through data. Specializing in Data Analytics, Power BI, SQL, and Business Intelligence to drive actionable insights.
                     </p>
                     <div class="hero-actions">
@@ -98,26 +104,606 @@
                         <div class="floating-card glass-card fc-2">
                             <i data-lucide="pie-chart"></i> Power BI Expert
                         </div>
+                        <div class="floating-card glass-card fc-3" style="display: flex; align-items: center; gap: 8px;">
+                            <img src="assets/gws-logo.png" alt="Govind Web Studio" style="width: 20px; height: 20px; object-fit: contain;"> Web Studio
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-    </main>
+    
+    <section id="about" class="section">
+        <div class="container" style="max-width: 1100px; margin: 0 auto; text-align: center;">
+            <div class="section-header reveal" style="text-align: center;">
+                <h2 style="display: inline-block;">About Me</h2>
+                <div class="line" style="margin: 10px auto;"></div>
+            </div>
+            
+            <div class="about-content reveal" style="display: flex; flex-direction: column; align-items: center; gap: 35px; padding-top: 20px;">
+                <!-- Profile Photo -->
+                <div class="profile-photo placeholder-img" style="width: 160px; height: 160px; margin: 0 auto; border-radius: 50%; overflow: hidden; box-shadow: 0 0 25px rgba(0, 212, 255, 0.4); border: 2px solid var(--primary);">
+                    <img src="assets/profile.jpg" alt="Govind Mandal" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                
+                <!-- Intro Text -->
+                <div class="about-text" style="max-width: 800px; margin: 0 auto;">
+                    <p style="font-size: 1.15rem; line-height: 1.7; color: var(--text-color);">
+                        I’m Govind Mandal, a technology-focused professional with interests in Data Analytics, Power BI and Web Development. I’m also the founder of Govind Web Studio, where I build modern digital experiences and websites for businesses and personal brands.
+                    </p>
+                </div>
+                
+                <!-- Govind Web Studio Card -->
+                <div class="card glass-card" style="max-width: 800px; width: 100%; padding: 30px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 15px; border: 1px solid rgba(0, 212, 255, 0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+                    <img src="assets/gws-logo.png" alt="Govind Web Studio Logo" style="width: 80px; height: auto; object-fit: contain;">
+                    <div>
+                        <h3 style="margin: 10px 0 5px 0; color: var(--primary); font-size: 1.5rem;">Govind Web Studio</h3>
+                        <h4 style="margin: 0; font-size: 1rem; color: var(--text-muted); font-weight: 500;">Founder & Web Developer — Govind Mandal</h4>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 10px;">
+                        <span style="background: rgba(0, 212, 255, 0.1); color: var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(0, 212, 255, 0.2);">Business Websites</span>
+                        <span style="background: rgba(0, 212, 255, 0.1); color: var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(0, 212, 255, 0.2);">Portfolio Websites</span>
+                        <span style="background: rgba(0, 212, 255, 0.1); color: var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(0, 212, 255, 0.2);">Landing Pages</span>
+                        <span style="background: rgba(0, 212, 255, 0.1); color: var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(0, 212, 255, 0.2);">Personal Brand Websites</span>
+                        <span style="background: rgba(0, 212, 255, 0.1); color: var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(0, 212, 255, 0.2);">Responsive Web Design</span>
+                        <span style="background: rgba(0, 212, 255, 0.1); color: var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(0, 212, 255, 0.2);">Website Redesign</span>
+                        <span style="background: rgba(0, 212, 255, 0.1); color: var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(0, 212, 255, 0.2);">Deployment & Hosting</span>
+                    </div>
+                </div>
+
+                <!-- Expertise Badges Row -->
+                <div class="expertise-badges" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 10px;">
+                    <span class="glass-card" style="padding: 12px 24px; border-radius: 30px; border: 1px solid rgba(0, 212, 255, 0.2); display: flex; align-items: center; gap: 10px; color: var(--text-color); font-weight: 500;"><i data-lucide="check" style="color: var(--primary); width: 18px; height: 18px;"></i> Data Analytics</span>
+                    <span class="glass-card" style="padding: 12px 24px; border-radius: 30px; border: 1px solid rgba(0, 212, 255, 0.2); display: flex; align-items: center; gap: 10px; color: var(--text-color); font-weight: 500;"><i data-lucide="check" style="color: var(--primary); width: 18px; height: 18px;"></i> Power BI & DAX</span>
+                    <span class="glass-card" style="padding: 12px 24px; border-radius: 30px; border: 1px solid rgba(0, 212, 255, 0.2); display: flex; align-items: center; gap: 10px; color: var(--text-color); font-weight: 500;"><i data-lucide="check" style="color: var(--primary); width: 18px; height: 18px;"></i> SQL & Databases</span>
+                    <span class="glass-card" style="padding: 12px 24px; border-radius: 30px; border: 1px solid rgba(0, 212, 255, 0.2); display: flex; align-items: center; gap: 10px; color: var(--text-color); font-weight: 500;"><i data-lucide="check" style="color: var(--primary); width: 18px; height: 18px;"></i> Dashboard Development</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-alt">
+        <div class="container" style="max-width: 1100px; margin: 0 auto;">
+            <div class="section-header reveal" style="text-align: center;">
+                <h2 style="display: inline-block;">Technical Skills</h2>
+                <div class="line" style="margin: 10px auto;"></div>
+            </div>
+            
+            <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; align-items: stretch; text-align: left; margin-top: 30px;">
+                <div class="skill-category card reveal">
+                        <div class="card-icon"><i data-lucide="database"></i></div>
+                        <h3>Data Analytics</h3>
+                        <ul class="skill-list">
+                            <li><i data-lucide="chevron-right"></i> Data Analysis</li>
+                            <li><i data-lucide="chevron-right"></i> Business Insights</li>
+                            <li><i data-lucide="chevron-right"></i> Requirement Gathering</li>
+                            <li><i data-lucide="chevron-right"></i> KPI Tracking</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category card reveal" style="transition-delay: 0.1s;">
+                        <div class="card-icon"><i data-lucide="pie-chart"></i></div>
+                        <h3>BI & Visualization</h3>
+                        <ul class="skill-list">
+                            <li><i data-lucide="chevron-right"></i> Power BI</li>
+                            <li><i data-lucide="chevron-right"></i> Dashboard Development</li>
+                            <li><i data-lucide="chevron-right"></i> Interactive Reports</li>
+                            <li><i data-lucide="chevron-right"></i> Storytelling with Data</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category card reveal" style="transition-delay: 0.2s;">
+                        <div class="card-icon"><i data-lucide="server"></i></div>
+                        <h3>Database & Querying</h3>
+                        <ul class="skill-list">
+                            <li><i data-lucide="chevron-right"></i> SQL</li>
+                            <li><i data-lucide="chevron-right"></i> Database Management</li>
+                            <li><i data-lucide="chevron-right"></i> Query Optimization</li>
+                            <li><i data-lucide="chevron-right"></i> Relational Databases</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category card reveal" style="transition-delay: 0.3s;">
+                        <div class="card-icon"><i data-lucide="monitor"></i></div>
+                        <h3>Microsoft Tools</h3>
+                        <ul class="skill-list">
+                            <li><i data-lucide="chevron-right"></i> Advanced Excel</li>
+                            <li><i data-lucide="chevron-right"></i> DAX</li>
+                            <li><i data-lucide="chevron-right"></i> Power Query</li>
+                            <li><i data-lucide="chevron-right"></i> M Code</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category card reveal" style="transition-delay: 0.4s;">
+                        <div class="card-icon"><i data-lucide="git-branch"></i></div>
+                        <h3>Data Transformation & Modeling</h3>
+                        <ul class="skill-list">
+                            <li><i data-lucide="chevron-right"></i> Data Modeling</li>
+                            <li><i data-lucide="chevron-right"></i> Star Schema</li>
+                            <li><i data-lucide="chevron-right"></i> ETL Processes</li>
+                            <li><i data-lucide="chevron-right"></i> Data Cleansing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="dashboard-grid" style="padding-top: 0;">
+            <div class="grid-col-full">
+                <section id="projects" class="section bg-alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Featured Projects</h2>
+                    <div class="line"></div>
+                </div>
+
+                <div class="project-filters reveal">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="powerbi">Power BI</button>
+                    <button class="filter-btn" data-filter="sql">SQL</button>
+                    <button class="filter-btn" data-filter="excel">Excel</button>
+                    <button class="filter-btn" data-filter="analytics">Analytics</button>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card card reveal" data-category="powerbi excel analytics">
+                        <div class="project-info">
+                            <h3>Business Website</h3>
+                            <div class="project-details">
+                                <p><strong>Focus:</strong> Corporate branding, lead generation, and professional online presence.</p>
+                                <p><strong>Outcome:</strong> Developed a responsive, modern business website with optimized SEO and fast load times.</p>
+                            </div>
+                            <ul class="project-insights">
+                                <li>Identified key regional performance gaps and underperforming product lines.</li>
+                                <li>Built dynamic YOY growth and time-intelligence metrics using DAX.</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card card reveal" data-category="powerbi sql excel analytics">
+                        <div class="project-info">
+                            <h3>E-commerce Website</h3>
+                            <div class="project-details">
+                                <p><strong>Focus:</strong> Online storefront, product catalogs, and seamless checkout experience.</p>
+                                <p><strong>Outcome:</strong> Built a full-featured e-commerce platform that drives sales and enhances user engagement.</p>
+                            </div>
+                            <ul class="project-insights">
+                                <li>Segmented the customer base to identify high-value purchasers and seasonal purchasing trends.</li>
+                                <li>Optimized data transformation using Power Query for faster refresh times.</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card card reveal" data-category="powerbi excel analytics">
+                        <div class="project-info">
+                            <h3>Portfolio Website</h3>
+                            <div class="project-details">
+                                <p><strong>Focus:</strong> Personal branding, project showcase, and professional biography.</p>
+                                <p><strong>Outcome:</strong> Designed a premium, glassmorphism portfolio to attract high-value clients and opportunities.</p>
+                            </div>
+                            <ul class="project-insights">
+                                <li>Visualized attrition drivers by tenure, role, and department.</li>
+                                <li>Implemented Row-Level Security (RLS) to ensure regional managers only access their own team's data.</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card card reveal" data-category="powerbi excel analytics">
+                        <div class="project-info">
+                            <h3>Restaurant Website</h3>
+                            <div class="project-details">
+                                <p><strong>Focus:</strong> Menu showcase, online reservations, and local SEO.</p>
+                                <p><strong>Outcome:</strong> Created an appetizing digital presence that increased table bookings and customer reach.</p>
+                            </div>
+                            <ul class="project-insights">
+                                <li>Developed complex DAX measures to calculate YTD variances and moving averages.</li>
+                                <li>Designed a clear, professional layout adhering to IBCS (International Business Communication Standards) principles.</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span>Power BI</span>
+                                <span>Excel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            </div>
+
+            <div class="grid-col-full">
+                <section id="services" class="section">
+                    <div class="container">
+                        <div class="section-header reveal">
+                            <h2>Websites I Build</h2>
+                            <p class="header-desc">Modern websites designed to help businesses, professionals and entrepreneurs grow online.</p>
+                        </div>
+                        <div class="skills-grid">
+                            <!-- Card 1 -->
+                            <div class="card reveal" style="padding: 30px; text-align: left;">
+                                <i data-lucide="building-2" style="width: 32px; height: 32px; color: var(--primary); margin-bottom: 15px;"></i>
+                                <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Business Websites</h3>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Professional websites for companies and local businesses.</p>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="card reveal" style="padding: 30px; text-align: left;">
+                                <i data-lucide="user-square-2" style="width: 32px; height: 32px; color: var(--primary); margin-bottom: 15px;"></i>
+                                <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Personal Portfolio Websites</h3>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Modern portfolios for professionals, freelancers and job seekers.</p>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="card reveal" style="padding: 30px; text-align: left;">
+                                <i data-lucide="coffee" style="width: 32px; height: 32px; color: var(--primary); margin-bottom: 15px;"></i>
+                                <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Restaurant & Cafe Websites</h3>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Menu, gallery, location, contact and enquiry features.</p>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="card reveal" style="padding: 30px; text-align: left;">
+                                <i data-lucide="scissors" style="width: 32px; height: 32px; color: var(--primary); margin-bottom: 15px;"></i>
+                                <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Salon & Beauty Websites</h3>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Services, pricing, gallery, booking/contact and WhatsApp integration.</p>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="card reveal" style="padding: 30px; text-align: left;">
+                                <i data-lucide="dumbbell" style="width: 32px; height: 32px; color: var(--primary); margin-bottom: 15px;"></i>
+                                <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Gym & Fitness Websites</h3>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Membership plans, services, trainers, schedules and contact sections.</p>
+                            </div>
+                            <!-- Card 6 -->
+                            <div class="card reveal" style="padding: 30px; text-align: left;">
+                                <i data-lucide="graduation-cap" style="width: 32px; height: 32px; color: var(--primary); margin-bottom: 15px;"></i>
+                                <h3 style="margin-bottom: 10px; font-size: 1.2rem;">School & Institute Websites</h3>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Courses, facilities, admissions, faculty, notices and contact sections.</p>
+                            </div>
+                            <!-- Card 7 -->
+                            <div class="card reveal" style="padding: 30px; text-align: left;">
+                                <i data-lucide="shopping-cart" style="width: 32px; height: 32px; color: var(--primary); margin-bottom: 15px;"></i>
+                                <h3 style="margin-bottom: 10px; font-size: 1.2rem;">E-commerce Websites</h3>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Product catalogues, product details and online business experience.</p>
+                            </div>
+                            <!-- Card 8 -->
+                            <div class="card reveal" style="padding: 30px; text-align: left;">
+                                <i data-lucide="layout-template" style="width: 32px; height: 32px; color: var(--primary); margin-bottom: 15px;"></i>
+                                <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Landing Pages</h3>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">High-converting landing pages for products, services and campaigns.</p>
+                            </div>
+                            <!-- Card 9 -->
+                            <div class="card reveal" style="padding: 30px; text-align: left;">
+                                <i data-lucide="home" style="width: 32px; height: 32px; color: var(--primary); margin-bottom: 15px;"></i>
+                                <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Real Estate Websites</h3>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Property listings, galleries, property details and enquiry sections.</p>
+                            </div>
+                            <!-- Card 10 -->
+                            <div class="card reveal" style="padding: 30px; text-align: left;">
+                                <i data-lucide="badge-check" style="width: 32px; height: 32px; color: var(--primary); margin-bottom: 15px;"></i>
+                                <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Personal Brand Websites</h3>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Professional websites for creators, consultants, coaches and entrepreneurs.</p>
+                            </div>
+                            <!-- Card 11 -->
+                            <div class="card reveal" style="padding: 30px; text-align: left;">
+                                <i data-lucide="camera" style="width: 32px; height: 32px; color: var(--primary); margin-bottom: 15px;"></i>
+                                <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Photography & Creative Portfolio</h3>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Premium image galleries, projects, services and enquiry sections.</p>
+                            </div>
+                            <!-- Card 12 -->
+                            <div class="card reveal" style="padding: 30px; text-align: left;">
+                                <i data-lucide="briefcase" style="width: 32px; height: 32px; color: var(--primary); margin-bottom: 15px;"></i>
+                                <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Service Business Websites</h3>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0;">Professional websites for agencies, freelancers and service providers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="grid-col-full">
+                <section id="powerbi-showcase" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Power BI Dashboard Showcase</h2>
+                    <p class="header-desc">Visually impressive dashboard concepts displaying key performance indicators.</p>
+                    <div class="line"></div>
+                </div>
+
+                <div class="showcase-grid">
+                    <!-- Showcase Card 1 -->
+                    <div class="showcase-card card reveal">
+                        <div class="showcase-img-wrapper">
+                            <img src="assets/sales-dashboard.png" alt="Executive Sales Dashboard" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+                        </div>
+                        <div class="showcase-content">
+                            <h3>Executive Sales Dashboard</h3>
+                            <div class="showcase-domain">Retail & E-commerce</div>
+                            <div class="project-details" style="margin-top: 0;">
+                                <p><strong>KPIs:</strong> Revenue, Profit Margin, YOY Growth, Target Achievement</p>
+                            </div>
+                            <div class="tech-stack" style="margin-top: auto; margin-bottom: var(--space-md);">
+                                <span>Power BI</span>
+                                <span>DAX</span>
+                            </div>
+                            <a href="javascript:void(0)" class="btn btn-sm btn-primary btn-full dashboard-btn" data-img="assets/sales-dashboard.png">View Dashboard</a>
+                        </div>
+                    </div>
+
+                    <!-- Showcase Card 2 -->
+                    <div class="showcase-card card reveal" style="transition-delay: 0.1s;">
+                        <div class="showcase-img-wrapper">
+                            <img src="assets/hr-dashboard.png" alt="HR Workforce Analytics Dashboard" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+                        </div>
+                        <div class="showcase-content">
+                            <h3>HR Workforce Analytics</h3>
+                            <div class="showcase-domain">Human Resources</div>
+                            <div class="project-details" style="margin-top: 0;">
+                                <p><strong>KPIs:</strong> Total Headcount, Attrition Rate, Avg Tenure, Salary Distribution</p>
+                            </div>
+                            <div class="tech-stack" style="margin-top: auto; margin-bottom: var(--space-md);">
+                                <span>Power BI</span>
+                                <span>Excel</span>
+                            </div>
+                            <a href="javascript:void(0)" class="btn btn-sm btn-primary btn-full dashboard-btn" data-img="assets/hr-dashboard.png">View Dashboard</a>
+                        </div>
+                    </div>
+
+                    <!-- Showcase Card 3 -->
+                    <div class="showcase-card card reveal" style="transition-delay: 0.2s;">
+                        <div class="showcase-img-wrapper">
+                            <img src="assets/financial-dashboard.png" alt="Financial Performance Dashboard" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+                        </div>
+                        <div class="showcase-content">
+                            <h3>Financial Performance</h3>
+                            <div class="showcase-domain">Corporate Finance</div>
+                            <div class="project-details" style="margin-top: 0;">
+                                <p><strong>KPIs:</strong> Net Income, Operating Cash Flow, Expense Ratio, EBITDA</p>
+                            </div>
+                            <div class="tech-stack" style="margin-top: auto; margin-bottom: var(--space-md);">
+                                <span>Power BI</span>
+                                <span>SQL</span>
+                            </div>
+                            <a href="javascript:void(0)" class="btn btn-sm btn-primary btn-full dashboard-btn" data-img="assets/financial-dashboard.png">View Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            </div>
+            
+            <div class="grid-col-left">
+                <section id="experience" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Professional Experience</h2>
+                    <div class="line"></div>
+                </div>
+                
+                <div class="timeline">
+                    
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content card">
+                            <div class="timeline-header">
+                                <div style="display: flex; align-items: center; gap: 15px;">
+                                    <img src="assets/gws-logo.png" alt="Govind Web Studio Logo" style="width: 80px; height: auto; object-fit: contain;">
+                                    <div>
+                                        <h3>Founder & Web Developer</h3>
+                                        <h4>Govind Web Studio</h4>
+                                    </div>
+                                </div>
+                                <span class="timeline-date">2026 - Present</span>
+                            </div>
+                            <p class="timeline-desc">I am the Founder of Govind Web Studio, a web development startup focused on creating modern, responsive and professional websites for businesses, entrepreneurs, professionals and personal brands.</p>
+                            <ul class="timeline-achievements">
+                                <li>Building modern, responsive and mobile-friendly websites.</li>
+                                <li>Designing premium business and portfolio websites.</li>
+                                <li>Developing landing pages and personal brand websites.</li>
+                                <li>Creating websites for restaurants, cafes, salons, gyms and fitness businesses.</li>
+                                <li>Building websites for schools, institutes and service-based businesses.</li>
+                                <li>Creating e-commerce and product showcase websites.</li>
+                                <li>Developing real-estate and property showcase websites.</li>
+                                <li>Creating photography and creative portfolio websites.</li>
+                                <li>Improving website UI/UX, responsiveness and performance.</li>
+                                <li>Deploying and maintaining websites using modern web technologies.</li>
+                                <li>Helping businesses establish a professional online presence.</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
+                                <span>Vercel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+            </div>
+            <div class="grid-col-right">
+                <section id="resume" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">My <span class="highlight">Resume</span></h2>
+                    <p class="section-subtitle">Professional experience and education</p>
+                </div>
+                <div class="resume-content reveal">
+                    <div class="resume-card glass-card">
+                        
+                        <div class="resume-header">
+                            <div class="resume-header-info">
+                                <h3>Govind Mandal</h3>
+                                <h4>Data Analyst & Power BI Developer</h4>
+                                <div class="resume-contact">
+                                    <span><i data-lucide="mail"></i> govindmandalgo7257@gmail.com</span>
+                                    <span><i data-lucide="map-pin"></i> India</span>
+                                    <span><i data-lucide="linkedin"></i> linkedin.com/in/govindmandal</span>
+                                </div>
+                            </div>
+                            <div class="resume-actions">
+                                <a href="assets/Govind_Mandal_Resume.pdf" target="_blank" class="btn btn-primary">
+                                    <i data-lucide="download"></i> Download PDF
+                                </a>
+                            </div>
+                        </div>
+
+                        <hr class="resume-divider">
+
+                        <div class="resume-section">
+                            <h4 class="resume-section-title"><i data-lucide="user"></i> Professional Summary</h4>
+                            <p>Data-driven professional with expertise in translating complex datasets into actionable business insights. Highly skilled in Power BI, SQL, and data visualization. Proven track record of developing interactive dashboards that drive strategic decision-making.</p>
+                        </div>
+
+                        <div class="resume-section">
+                            <h4 class="resume-section-title"><i data-lucide="award"></i> Core Skills</h4>
+                            <ul class="resume-skills-list">
+                                <li><strong>Tools & Tech:</strong> Power BI, SQL Server, Excel (Advanced), Python, DAX, Power Query</li>
+                                <li><strong>Data Analysis:</strong> Data Modeling, ETL Processes, Data Cleaning, Statistical Analysis</li>
+                                <li><strong>Business Intelligence:</strong> KPI Tracking, Interactive Dashboards, Financial Analysis</li>
+                            </ul>
+                        </div>
+
+                        <div class="resume-section">
+                            <h4 class="resume-section-title"><i data-lucide="briefcase"></i> Experience</h4>
+                            
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <h5>Founder & Web Developer</h5>
+                                    <span class="resume-date">2026 - Present</span>
+                                </div>
+                                <div class="resume-company">Govind Web Studio</div>
+                                <ul class="resume-bullets">
+                                    <li>Founder of a web development startup focused on creating modern, responsive websites.</li>
+                                    <li>Building premium UI/UX layouts and developing landing pages and service websites.</li>
+                                    <li>Deploying websites using modern tooling like GitHub and Vercel for fast, secure delivery.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="resume-section">
+                            <h4 class="resume-section-title"><i data-lucide="graduation-cap"></i> Education</h4>
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <h5>Bachelor of Technology in Computer Science</h5>
+                                    <span class="resume-date">2020 - 2024</span>
+                                </div>
+                                <div class="resume-company"></div>
+                                <p>Focus on Data Structures, Algorithms, and Database Management Systems.</p>
+                            </div>
+                        </div>
+
+                        <div class="resume-section">
+                            <h4 class="resume-section-title"><i data-lucide="folder"></i> Key Projects</h4>
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <h5>E-Commerce Sales Performance Dashboard</h5>
+                                </div>
+                                <p><strong>Tools:</strong> Power BI, SQL, DAX</p>
+                                <ul class="resume-bullets">
+                                    <li>Built an interactive dashboard analyzing $5M+ in revenue across multiple product categories.</li>
+                                    <li>Identified seasonal sales trends and recommended targeted marketing strategies.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+            </div>
+            
+            <div class="grid-col-full">
+                <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-wrapper card reveal">
+                    <div class="contact-info">
+                        <h2>Let's Connect</h2>
+                        <p>I am open to discussing new opportunities, analytics projects, or networking. Feel free to reach out via email or connect with me on LinkedIn.</p>
+                        
+                        <div class="contact-links">
+                            <a href="tel:7257997915" class="contact-item">
+                                <i data-lucide="phone"></i> 7257997915
+                            </a>
+                            <a href="mailto:govindmandalgo7257@gmail.com" class="contact-item">
+                                <i data-lucide="mail"></i> govindmandalgo7257@gmail.com
+                            </a>
+                            <a href="#" class="contact-item">
+                                <i data-lucide="linkedin"></i> LinkedIn
+                            </a>
+                            <a href="#" class="contact-item">
+                                <i data-lucide="github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                                <span class="error-msg">Please enter your name</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-msg">Please enter a valid email</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" required placeholder="How can I help you?"></textarea>
+                                <span class="error-msg">Please enter a message</span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                Send Message <i data-lucide="send"></i>
+                            </button>
+                            <p class="form-status" id="form-status"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+            </div>
+        </div>
+    </div>
+</main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-brand">
-                <h3>Govind Mandal</h3>
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                    <img src="assets/gws-logo.png" alt="Govind Web Studio Logo" style="width: 50px; height: auto; object-fit: contain;">
+                    <div>
+                        <h3 style="margin: 0;">Govind Mandal</h3>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Founder, Govind Web Studio</p>
+                    </div>
+                </div>
                 <p>Data Analyst & Power BI Developer</p>
             </div>
             
             <div class="footer-links">
                 <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
             
             <div class="footer-social">
@@ -148,5 +734,12 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
     <script src="js/script.js"></script>
+
+    <!-- Dashboard Image Modal -->
+    <div id="dashboardModal" class="dashboard-modal">
+        <span class="dashboard-modal-close">&times;</span>
+        <img class="dashboard-modal-content" id="dashboardModalImg">
+    </div>
 </body>
+
 </html>
