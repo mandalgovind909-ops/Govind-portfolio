@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             navbar.classList.remove('scrolled');
         }
-    });
+    }, { passive: true });
 
     // Active Link Highlighting (URL based)
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';

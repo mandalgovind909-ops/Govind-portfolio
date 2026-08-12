@@ -235,8 +235,8 @@ img {
     border-radius: var(--border-radius);
     padding: var(--space-lg);
     box-shadow: var(--shadow-card);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base), background-color var(--transition-base);
     position: relative;
     overflow: hidden;
@@ -379,8 +379,8 @@ img {
     width: 100%;
     height: 80px;
     background-color: var(--bg-secondary);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
     transition: background-color var(--transition-base), box-shadow var(--transition-base);
@@ -576,6 +576,7 @@ img {
 
 .pulse-ring {
     position: absolute;
+    will-change: transform, opacity;
     inset: -20px;
     border-radius: 50%;
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
@@ -1288,8 +1289,8 @@ img {
    ========================================================================== */
 .footer {
     background-color: var(--bg-secondary);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-top: 1px solid var(--border-color);
     padding: var(--space-xl) 0 var(--space-md);
 }
@@ -1357,6 +1358,7 @@ img {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
 }
 
 .reveal.active {
@@ -1423,7 +1425,7 @@ img {
         width: 100%;
     }
     
-    .hero-actions .btn {
+    .hero-actions > .btn {
         width: 100%;
     }
     
@@ -1822,18 +1824,51 @@ h1, h2, h3, h4, h5, h6, p, a, span, div {
         flex-direction: column !important;
         width: 100% !important;
     }
-    .hero-actions .btn {
+    .hero-actions > .btn {
         width: 100% !important;
     }
-    .floating-card {
-        /* Keep them but prevent them from extending out */
-        transform: scale(0.85);
-        white-space: normal !important;
-        text-align: center;
+    .hero-actions .btn-group {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+        gap: 8px !important;
     }
-    .fc-1 { left: 0px !important; top: 0% !important; }
-    .fc-2 { right: 0px !important; bottom: 0% !important; }
-    .fc-3 { left: 0px !important; top: 80% !important; }
+    .hero-actions .btn-group .btn {
+        width: auto !important;
+    }
+    .hero-actions .btn-group .btn:first-child {
+        flex: 1 !important;
+        white-space: nowrap !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px 12px !important;
+    }
+    .hero-actions .btn-group .btn:last-child {
+        flex: 0 0 auto !important;
+        padding: 10px 16px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .floating-card {
+        transform: scale(0.85) !important;
+        white-space: nowrap !important;
+        text-align: left !important;
+        justify-content: flex-start !important;
+        max-width: 85% !important;
+        padding: 8px 12px !important;
+        z-index: 10 !important;
+    }
+    .floating-card i, .floating-card img {
+        width: 18px !important;
+        height: 18px !important;
+        margin-right: 4px !important;
+    }
+    .fc-1 { left: 5% !important; top: 8% !important; right: auto !important; }
+    .fc-2 { right: 5% !important; bottom: 12% !important; left: auto !important; }
+    .fc-3 { left: 5% !important; bottom: 25% !important; right: auto !important; top: auto !important; }
     
     /* Profile Image (Pop-Out) in About Section */
     .profile-photo-3d {
@@ -2412,4 +2447,85 @@ h1, h2, h3, h4, h5, h6, p, a, span {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* URGENT 480PX HERO OVERRIDES */
+@media (max-width: 480px) {
+    .hero-actions .btn-group {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+        gap: 8px !important;
+    }
+
+    /* 1. View Resume button */
+    .hero-actions .btn-group .btn:first-child {
+        white-space: nowrap !important;
+        width: fit-content !important;
+        min-width: 0 !important;
+        max-width: 150px !important;
+        padding: 9px 14px !important;
+        font-size: 14px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+    }
+    
+    /* 2. Resume download button */
+    .hero-actions .btn-group .btn:last-child {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: auto !important;
+        flex: 0 0 auto !important;
+        padding: 10px 16px !important;
+    }
+
+    /* 3. Data Insights floating card */
+    .floating-card.fc-1 {
+        left: 2% !important;
+        top: 5% !important;
+        right: auto !important;
+        bottom: auto !important;
+        max-width: 85% !important;
+        text-align: left !important;
+        justify-content: flex-start !important;
+        padding: 6px 10px !important;
+        transform: scale(0.85) !important;
+    }
+    
+    /* 4. Web Studio floating card */
+    .floating-card.fc-3 {
+        left: 2% !important;
+        bottom: 20% !important;
+        right: auto !important;
+        top: auto !important;
+        max-width: 85% !important;
+        text-align: left !important;
+        justify-content: flex-start !important;
+        padding: 6px 10px !important;
+        transform: scale(0.85) !important;
+    }
+    
+    /* 5. Power BI Expert floating card */
+    .floating-card.fc-2 {
+        right: 2% !important;
+        bottom: 8% !important;
+        left: auto !important;
+        top: auto !important;
+        max-width: 85% !important;
+        text-align: left !important;
+        justify-content: flex-start !important;
+        padding: 6px 10px !important;
+        transform: scale(0.85) !important;
+    }
+
+    /* G) Feature icons */
+    .floating-card i, .floating-card img {
+        width: 18px !important;
+        height: 18px !important;
+        margin-right: 6px !important;
+    }
 }
