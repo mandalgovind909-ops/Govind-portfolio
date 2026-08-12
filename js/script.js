@@ -1,23 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Mobile Menu Toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
     const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-    const menuIcon = mobileMenuBtn.querySelector('i');
-
     function toggleMenu() {
         mobileMenuOverlay.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('active');
         const isActive = mobileMenuOverlay.classList.contains('active');
-        
-        // Update icon based on state
-        if (isActive) {
-            menuIcon.setAttribute('data-lucide', 'x');
-        } else {
-            menuIcon.setAttribute('data-lucide', 'menu');
-        }
-        lucide.createIcons();
-        
-        // Prevent body scrolling when menu is open
         document.body.style.overflow = isActive ? 'hidden' : '';
     }
 
@@ -288,4 +277,30 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Theme Toggle
+    const themeBtns = document.querySelectorAll('.theme-btn, .mobile-theme-btn');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    
+    function updateThemeUI(theme) {
+        if (theme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            document.querySelectorAll('.theme-icon-sun').forEach(icon => { if(icon) icon.style.display = 'block'; });
+            document.querySelectorAll('.theme-icon-moon').forEach(icon => { if(icon) icon.style.display = 'none'; });
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.querySelectorAll('.theme-icon-sun').forEach(icon => { if(icon) icon.style.display = 'none'; });
+            document.querySelectorAll('.theme-icon-moon').forEach(icon => { if(icon) icon.style.display = 'block'; });
+        }
+    }
+    updateThemeUI(savedTheme);
+    
+    themeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            updateThemeUI(newTheme);
+        });
+    });
 });
