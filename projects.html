@@ -3,15 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Govind Mandal | Data Analyst & Power BI Developer</title>
-    <meta name="description" content="Portfolio of Govind Mandal, a Data Analyst & Power BI Developer specializing in Power BI, SQL, data visualization and business intelligence.">
-    
+    <title>Projects | Govind Mandal</title>
+    <meta name="description" content="Discover data analysis and business intelligence projects developed by Govind Mandal.">
+    <meta name="keywords" content="Govind Mandal, Data Analyst, Power BI Developer, SQL, DAX, Excel, Data Visualization, Business Intelligence, Dashboards, Web Developer">
+    <link rel="canonical" href="https://govind-portfolio-alpha.vercel.app/projects">
+    <meta name="robots" content="index, follow">
+
     <!-- Open Graph Metadata -->
-    <meta property="og:title" content="Govind Mandal | Data Analyst & Power BI Developer">
-    <meta property="og:description" content="Portfolio of Govind Mandal, a Data Analyst & Power BI Developer specializing in Power BI, SQL, data visualization and business intelligence.">
+    <meta property="og:title" content="Projects | Govind Mandal">
+    <meta property="og:description" content="Discover data analysis and business intelligence projects developed by Govind Mandal.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="[Add Canonical URL]">
-    <meta property="og:image" content="[Add OG Image URL]">
+    <meta property="og:url" content="https://govind-portfolio-alpha.vercel.app">
+    <meta property="og:image" content="https://govind-portfolio-alpha.vercel.app/assets/profile.jpg">
+    <meta property="og:site_name" content="Govind Mandal Portfolio">
+
+    <!-- Twitter/X Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Govind Mandal">
+    <meta name="twitter:description" content="Discover data analysis and business intelligence projects developed by Govind Mandal.">
+    <meta name="twitter:image" content="https://govind-portfolio-alpha.vercel.app/assets/profile.jpg">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Govind Mandal",
+          "jobTitle": "Data Analyst & Power BI Developer",
+          "url": "https://govind-portfolio-alpha.vercel.app",
+          "image": "https://govind-portfolio-alpha.vercel.app/assets/profile.jpg",
+          "sameAs": [
+            "https://linkedin.com/in/govindmandal"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "name": "Govind Mandal Portfolio",
+          "url": "https://govind-portfolio-alpha.vercel.app"
+        }
+      ]
+    }
+    </script>
+
+    
+    
+    
+    
+
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,28 +63,50 @@
     
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
 </head>
 <body>
 
     <div id="tsparticles"></div>
 
     <!-- Navigation -->
-    <nav class="navbar">
+            <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">Govind<span class="dot">.</span></a>
+            <a href="index.html" class="logo">Govind<span class="dot">.</span></a>
             
             <div class="nav-links">
                 <a href="about.html" class="nav-link">About</a>
                 <a href="skills.html" class="nav-link">Skills</a>
-                <a href="experience.html" class="nav-link">Experience</a>
+                <a href="about.html#experience" class="nav-link">Experience</a>
                 <a href="projects.html" class="nav-link">Projects</a>
-                <a href="index.html#blog" class="nav-link">Blog</a>
+                <a href="analytics.html" class="nav-link">Analytics</a>
+                <a href="resume.html" class="nav-link">Resume</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
 
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <i data-lucide="menu"></i>
+            <div class="mobile-actions">
+                <button id="theme-toggle" aria-label="Toggle Theme" class="theme-btn">
+                <i data-lucide="sun" class="theme-icon-sun" style="display: none; width: 20px; height: 20px;"></i>
+                <i data-lucide="moon" class="theme-icon-moon" style="width: 20px; height: 20px;"></i>
             </button>
+                <button class="mobile-menu-toggle mobile-menu-btn" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -53,16 +115,18 @@
         <div class="mobile-nav-links">
             <a href="about.html" class="mobile-nav-link">About</a>
             <a href="skills.html" class="mobile-nav-link">Skills</a>
-            <a href="experience.html" class="mobile-nav-link">Experience</a>
+            <a href="about.html#experience" class="mobile-nav-link">Experience</a>
             <a href="projects.html" class="mobile-nav-link">Projects</a>
-            <a href="index.html#blog" class="mobile-nav-link">Blog</a>
+                <a href="analytics.html" class="nav-link">Analytics</a>
+            <a href="resume.html" class="mobile-nav-link">Resume</a>
             <a href="contact.html" class="mobile-nav-link">Contact</a>
+            
+            <!-- Theme button moved to header -->
         </div>
     </div>
 
     <!-- Main Content -->
-    <main>
-        <section id="projects" class="section bg-alt">
+    <main><section id="projects" class="section bg-alt">
             <div class="container">
                 <div class="section-header reveal">
                     <h2>Featured Projects</h2>
@@ -81,19 +145,19 @@
                     <!-- Project 1 -->
                     <div class="project-card card reveal" data-category="powerbi excel analytics">
                         <div class="project-info">
-                            <h3>Sales Performance Dashboard</h3>
+                            <h3>Business Website</h3>
                             <div class="project-details">
-                                <p><strong>Focus:</strong> Revenue, profit margins, sales trends, regional distribution, and product performance analysis.</p>
-                                <p><strong>Outcome:</strong> Delivered an automated reporting pipeline that replaced manual spreadsheet workflows, giving leadership real-time visibility into sales metrics.</p>
+                                <p><strong>Focus:</strong> Corporate branding, lead generation, and professional online presence.</p>
+                                <p><strong>Outcome:</strong> Developed a responsive, modern business website with optimized SEO and fast load times.</p>
                             </div>
                             <ul class="project-insights">
                                 <li>Identified key regional performance gaps and underperforming product lines.</li>
                                 <li>Built dynamic YOY growth and time-intelligence metrics using DAX.</li>
                             </ul>
                             <div class="tech-stack">
-                                <span>Power BI</span>
-                                <span>Excel</span>
-                                <span>DAX</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
                             </div>
                         </div>
                     </div>
@@ -101,19 +165,19 @@
                     <!-- Project 2 -->
                     <div class="project-card card reveal" data-category="powerbi sql excel analytics">
                         <div class="project-info">
-                            <h3>E-Commerce Analytics Dashboard</h3>
+                            <h3>E-commerce Website</h3>
                             <div class="project-details">
-                                <p><strong>Focus:</strong> Order volume, customer segmentation, revenue tracking, and product category trends.</p>
-                                <p><strong>Outcome:</strong> Engineered a unified data model connecting disparate SQL databases and Excel files to track comprehensive e-commerce KPIs.</p>
+                                <p><strong>Focus:</strong> Online storefront, product catalogs, and seamless checkout experience.</p>
+                                <p><strong>Outcome:</strong> Built a full-featured e-commerce platform that drives sales and enhances user engagement.</p>
                             </div>
                             <ul class="project-insights">
                                 <li>Segmented the customer base to identify high-value purchasers and seasonal purchasing trends.</li>
                                 <li>Optimized data transformation using Power Query for faster refresh times.</li>
                             </ul>
                             <div class="tech-stack">
-                                <span>Power BI</span>
-                                <span>SQL</span>
-                                <span>Excel</span>
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
                             </div>
                         </div>
                     </div>
@@ -121,19 +185,19 @@
                     <!-- Project 3 -->
                     <div class="project-card card reveal" data-category="powerbi excel analytics">
                         <div class="project-info">
-                            <h3>HR Analytics Dashboard</h3>
+                            <h3>Portfolio Website</h3>
                             <div class="project-details">
-                                <p><strong>Focus:</strong> Employee headcount, attrition rates, departmental breakdown, salary analysis, and workforce trends.</p>
-                                <p><strong>Outcome:</strong> Built an interactive dashboard that enabled the HR team to proactively identify retention risks and diversity gaps.</p>
+                                <p><strong>Focus:</strong> Personal branding, project showcase, and professional biography.</p>
+                                <p><strong>Outcome:</strong> Designed a premium, glassmorphism portfolio to attract high-value clients and opportunities.</p>
                             </div>
                             <ul class="project-insights">
                                 <li>Visualized attrition drivers by tenure, role, and department.</li>
                                 <li>Implemented Row-Level Security (RLS) to ensure regional managers only access their own team's data.</li>
                             </ul>
                             <div class="tech-stack">
-                                <span>Power BI</span>
-                                <span>Excel</span>
-                                <span>DAX</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
                             </div>
                         </div>
                     </div>
@@ -141,10 +205,10 @@
                     <!-- Project 4 -->
                     <div class="project-card card reveal" data-category="powerbi excel analytics">
                         <div class="project-info">
-                            <h3>Financial Performance Dashboard</h3>
+                            <h3>Restaurant Website</h3>
                             <div class="project-details">
-                                <p><strong>Focus:</strong> Net income, operating expenses, ROI, cash flow analysis, and budget vs. actuals.</p>
-                                <p><strong>Outcome:</strong> Created a comprehensive financial view that reduced month-end reporting time and improved budget forecasting accuracy.</p>
+                                <p><strong>Focus:</strong> Menu showcase, online reservations, and local SEO.</p>
+                                <p><strong>Outcome:</strong> Created an appetizing digital presence that increased table bookings and customer reach.</p>
                             </div>
                             <ul class="project-insights">
                                 <li>Developed complex DAX measures to calculate YTD variances and moving averages.</li>
@@ -158,15 +222,19 @@
                     </div>
                 </div>
             </div>
-        </section>
-        
-    </main>
+        </section></main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-brand">
-                <h3>Govind Mandal</h3>
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                    <img src="assets/gws-logo.png" alt="Govind Web Studio Logo" style="width: 50px; height: auto; object-fit: contain;" loading="lazy" decoding="async">
+                    <div>
+                        <h3 style="margin: 0;">Govind Mandal</h3>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Founder, Govind Web Studio</p>
+                    </div>
+                </div>
                 <p>Data Analyst & Power BI Developer</p>
             </div>
             
@@ -178,9 +246,9 @@
             </div>
             
             <div class="footer-social">
-                <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
-                <a href="#" aria-label="Email"><i data-lucide="mail"></i></a>
+                <a href="javascript:void(0)" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                <a href="javascript:void(0)" aria-label="GitHub"><i data-lucide="github"></i></a>
+                <a href="javascript:void(0)" aria-label="Email"><i data-lucide="mail"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -205,5 +273,43 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
     <script src="js/script.js"></script>
+
+    <!-- Dashboard Image Modal -->
+    <div id="dashboardModal" class="dashboard-modal">
+        <span class="dashboard-modal-close">&times;</span>
+        <img class="dashboard-modal-content" id="dashboardModalImg" loading="lazy" decoding="async" alt="Expanded Dashboard View">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.parentElement;
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all
+                    document.querySelectorAll('.faq-item').forEach(faq => {
+                        faq.classList.remove('active');
+                        faq.querySelector('.faq-answer').style.maxHeight = null;
+                    });
+                    
+                    // Open clicked if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                        const answer = item.querySelector('.faq-answer');
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                    
+                    // Trigger Lucide icons refresh just in case
+                    if(window.lucide) { lucide.createIcons(); }
+                });
+            });
+        });
+    </script>
+
+
 </body>
+
+
 </html>

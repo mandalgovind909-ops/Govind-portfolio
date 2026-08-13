@@ -3,15 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Govind Mandal | Data Analyst & Power BI Developer</title>
-    <meta name="description" content="Portfolio of Govind Mandal, a Data Analyst & Power BI Developer specializing in Power BI, SQL, data visualization and business intelligence.">
-    
+    <title>Contact | Govind Mandal</title>
+    <meta name="description" content="Get in touch with Govind Mandal for data analytics projects, collaborations, or career opportunities.">
+    <meta name="keywords" content="Govind Mandal, Data Analyst, Power BI Developer, SQL, DAX, Excel, Data Visualization, Business Intelligence, Dashboards, Web Developer">
+    <link rel="canonical" href="https://govind-portfolio-alpha.vercel.app/contact">
+    <meta name="robots" content="index, follow">
+
     <!-- Open Graph Metadata -->
-    <meta property="og:title" content="Govind Mandal | Data Analyst & Power BI Developer">
-    <meta property="og:description" content="Portfolio of Govind Mandal, a Data Analyst & Power BI Developer specializing in Power BI, SQL, data visualization and business intelligence.">
+    <meta property="og:title" content="Contact | Govind Mandal">
+    <meta property="og:description" content="Get in touch with Govind Mandal for data analytics projects, collaborations, or career opportunities.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="[Add Canonical URL]">
-    <meta property="og:image" content="[Add OG Image URL]">
+    <meta property="og:url" content="https://govind-portfolio-alpha.vercel.app">
+    <meta property="og:image" content="https://govind-portfolio-alpha.vercel.app/assets/profile.jpg">
+    <meta property="og:site_name" content="Govind Mandal Portfolio">
+
+    <!-- Twitter/X Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact | Govind Mandal">
+    <meta name="twitter:description" content="Get in touch with Govind Mandal for data analytics projects, collaborations, or career opportunities.">
+    <meta name="twitter:image" content="https://govind-portfolio-alpha.vercel.app/assets/profile.jpg">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Govind Mandal",
+          "jobTitle": "Data Analyst & Power BI Developer",
+          "url": "https://govind-portfolio-alpha.vercel.app",
+          "image": "https://govind-portfolio-alpha.vercel.app/assets/profile.jpg",
+          "sameAs": [
+            "https://linkedin.com/in/govindmandal"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "name": "Govind Mandal Portfolio",
+          "url": "https://govind-portfolio-alpha.vercel.app"
+        }
+      ]
+    }
+    </script>
+
+    
+    
+    
+    
+
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,28 +63,50 @@
     
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
 </head>
 <body>
 
     <div id="tsparticles"></div>
 
     <!-- Navigation -->
-    <nav class="navbar">
+            <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">Govind<span class="dot">.</span></a>
+            <a href="index.html" class="logo">Govind<span class="dot">.</span></a>
             
             <div class="nav-links">
                 <a href="about.html" class="nav-link">About</a>
                 <a href="skills.html" class="nav-link">Skills</a>
-                <a href="experience.html" class="nav-link">Experience</a>
+                <a href="about.html#experience" class="nav-link">Experience</a>
                 <a href="projects.html" class="nav-link">Projects</a>
-                <a href="index.html#blog" class="nav-link">Blog</a>
+                <a href="analytics.html" class="nav-link">Analytics</a>
+                <a href="resume.html" class="nav-link">Resume</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
 
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <i data-lucide="menu"></i>
+            <div class="mobile-actions">
+                <button id="theme-toggle" aria-label="Toggle Theme" class="theme-btn">
+                <i data-lucide="sun" class="theme-icon-sun" style="display: none; width: 20px; height: 20px;"></i>
+                <i data-lucide="moon" class="theme-icon-moon" style="width: 20px; height: 20px;"></i>
             </button>
+                <button class="mobile-menu-toggle mobile-menu-btn" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -53,16 +115,110 @@
         <div class="mobile-nav-links">
             <a href="about.html" class="mobile-nav-link">About</a>
             <a href="skills.html" class="mobile-nav-link">Skills</a>
-            <a href="experience.html" class="mobile-nav-link">Experience</a>
+            <a href="about.html#experience" class="mobile-nav-link">Experience</a>
             <a href="projects.html" class="mobile-nav-link">Projects</a>
-            <a href="index.html#blog" class="mobile-nav-link">Blog</a>
+                <a href="analytics.html" class="nav-link">Analytics</a>
+            <a href="resume.html" class="mobile-nav-link">Resume</a>
             <a href="contact.html" class="mobile-nav-link">Contact</a>
+            
+            <!-- Theme button moved to header -->
         </div>
     </div>
 
     <!-- Main Content -->
-    <main>
-        <section id="contact" class="section">
+    <main><section id="faq" class="section bg-alt">
+            <div class="container">
+                <div class="section-header reveal" style="text-align: center;">
+                    <span class="badge" style="display: inline-block; padding: 4px 12px; background: rgba(59, 130, 246, 0.1); color: var(--accent-blue); border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px; border: 1px solid rgba(59, 130, 246, 0.2);">GOT QUESTIONS?</span>
+                    <h2>Frequently Asked Questions</h2>
+                    <p class="header-desc">Common questions about my work, Govind Web Studio, and the services I provide.</p>
+                    <div class="line"></div>
+                </div>
+
+                <div class="faq-container reveal">
+                    <div class="faq-item glass-card active">
+                        <button class="faq-question">
+                            <span class="faq-title"><i data-lucide="help-circle" style="width: 18px; color: var(--accent-blue);"></i> What is Govind Web Studio?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer" style="max-height: 200px;">
+                            <p>Govind Web Studio is my web development studio where I create modern, responsive and professional websites for businesses, entrepreneurs and personal brands.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span class="faq-title"><i data-lucide="layout" style="width: 18px; color: var(--accent-blue);"></i> What type of websites do you build?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>I build business websites, portfolio websites, landing pages, personal brand websites and custom responsive websites based on the client's requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span class="faq-title"><i data-lucide="smartphone" style="width: 18px; color: var(--accent-blue);"></i> Do you build mobile-friendly websites?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. I focus on responsive design so websites work smoothly across mobile phones, tablets and desktop devices.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span class="faq-title"><i data-lucide="refresh-cw" style="width: 18px; color: var(--accent-blue);"></i> Do you provide website redesign services?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. I can redesign existing websites to give them a more modern look, improve responsiveness, user experience and overall presentation.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span class="faq-title"><i data-lucide="server" style="width: 18px; color: var(--accent-blue);"></i> Do you provide website deployment and hosting support?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. I can help with deployment and hosting setup so the completed website can be published and accessed online.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span class="faq-title"><i data-lucide="briefcase" style="width: 18px; color: var(--accent-blue);"></i> Can you build a website for my business?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. I can create a professional business website based on your brand, services, target audience and requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span class="faq-title"><i data-lucide="message-square" style="width: 18px; color: var(--accent-blue);"></i> How can I start a project with Govind Web Studio?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can contact me through the Contact section of this portfolio. Share your project idea, requirements and goals, and we can discuss the next steps.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <button class="faq-question">
+                            <span class="faq-title"><i data-lucide="bar-chart" style="width: 18px; color: var(--accent-blue);"></i> Do you also work with Data Analytics and Power BI?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. My professional interests include Data Analytics, Power BI, SQL and dashboard development, alongside my work in web development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section id="contact" class="section">
             <div class="container">
                 <div class="contact-wrapper card reveal">
                     <div class="contact-info">
@@ -70,13 +226,16 @@
                         <p>I am open to discussing new opportunities, analytics projects, or networking. Feel free to reach out via email or connect with me on LinkedIn.</p>
                         
                         <div class="contact-links">
-                            <a href="#" class="contact-item">
-                                <i data-lucide="mail"></i> Email Me
+                            <a href="tel:7257997915" class="contact-item">
+                                <i data-lucide="phone"></i> 7257997915
                             </a>
-                            <a href="#" class="contact-item">
+                            <a href="mailto:govindmandalgo7257@gmail.com" class="contact-item">
+                                <i data-lucide="mail"></i> govindmandalgo7257@gmail.com
+                            </a>
+                            <a href="javascript:void(0)" class="contact-item">
                                 <i data-lucide="linkedin"></i> LinkedIn
                             </a>
-                            <a href="#" class="contact-item">
+                            <a href="javascript:void(0)" class="contact-item">
                                 <i data-lucide="github"></i> GitHub
                             </a>
                         </div>
@@ -86,36 +245,40 @@
                         <form id="contact-form" class="contact-form" novalidate>
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Your Name">
+                                <input type="text" id="name" name="name" required>
                                 <span class="error-msg">Please enter your name</span>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                                <input type="email" id="email" name="email" required>
                                 <span class="error-msg">Please enter a valid email</span>
-                            </div>
+                            
                             <div class="form-group">
                                 <label for="message">Message</label>
                                 <textarea id="message" name="message" rows="4" required placeholder="How can I help you?"></textarea>
                                 <span class="error-msg">Please enter a message</span>
-                            </div>
+                            
                             <button type="submit" class="btn btn-primary btn-full">
                                 Send Message <i data-lucide="send"></i>
                             </button>
                             <p class="form-status" id="form-status"></p>
                         </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-    </main>
+                    
+                
+            
+        </section></main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-brand">
-                <h3>Govind Mandal</h3>
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
+                    <img src="assets/gws-logo.png" alt="Govind Web Studio Logo" style="width: 50px; height: auto; object-fit: contain;" loading="lazy" decoding="async">
+                    <div>
+                        <h3 style="margin: 0;">Govind Mandal</h3>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Founder, Govind Web Studio</p>
+                    </div>
+                </div>
                 <p>Data Analyst & Power BI Developer</p>
             </div>
             
@@ -127,9 +290,9 @@
             </div>
             
             <div class="footer-social">
-                <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
-                <a href="#" aria-label="Email"><i data-lucide="mail"></i></a>
+                <a href="javascript:void(0)" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                <a href="javascript:void(0)" aria-label="GitHub"><i data-lucide="github"></i></a>
+                <a href="javascript:void(0)" aria-label="Email"><i data-lucide="mail"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -154,5 +317,43 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
     <script src="js/script.js"></script>
+
+    <!-- Dashboard Image Modal -->
+    <div id="dashboardModal" class="dashboard-modal">
+        <span class="dashboard-modal-close">&times;</span>
+        <img class="dashboard-modal-content" id="dashboardModalImg" loading="lazy" decoding="async" alt="Expanded Dashboard View">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.parentElement;
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all
+                    document.querySelectorAll('.faq-item').forEach(faq => {
+                        faq.classList.remove('active');
+                        faq.querySelector('.faq-answer').style.maxHeight = null;
+                    });
+                    
+                    // Open clicked if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                        const answer = item.querySelector('.faq-answer');
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                    
+                    // Trigger Lucide icons refresh just in case
+                    if(window.lucide) { lucide.createIcons(); }
+                });
+            });
+        });
+    </script>
+
+
 </body>
+
+
 </html>

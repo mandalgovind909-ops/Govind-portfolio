@@ -123,7 +123,7 @@ body {
 main {
     flex: 1 0 auto;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 #tsparticles {
@@ -1705,7 +1705,7 @@ img {
    Clean Global Responsive & Layout Fixes
    ========================================================================== */
 html, body {
-    overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
 }
 
@@ -1788,7 +1788,7 @@ img, video, iframe, svg {
 
 /* Global Fixes */
 html, body {
-    overflow-x: hidden !important;
+    overflow-x: clip !important;
     width: 100% !important;
     max-width: 100vw !important;
 }
@@ -2038,7 +2038,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, div {
 html, body {
     max-width: 100vw;
     width: 100%;
-    overflow-x: hidden !important;
+    overflow-x: clip !important;
     position: relative;
 }
 
@@ -2129,7 +2129,7 @@ h1, h2, h3, h4, h5, h6, p, a, span {
         padding-right: 16px !important;
         width: 100% !important;
         max-width: 100vw !important;
-        overflow-x: hidden;
+        overflow-x: clip;
     }
     
     /* Convert grids to single column gracefully */
@@ -2529,3 +2529,19 @@ h1, h2, h3, h4, h5, h6, p, a, span {
         margin-right: 6px !important;
     }
 }
+
+
+/* --- MOBILE SCROLL & VISIBILITY FIXES --- */
+.hero-visual, .hero-image-wrapper, .profile-photo-3d, .about-image-col, .neon-ring {
+    touch-action: pan-y !important; /* Ensure vertical scrolling works over animations */
+    overflow: visible !important; /* Prevent clipping of 3D animations */
+}
+
+.profile-photo-3d {
+    padding-bottom: 30px !important; /* Extra space for the scaled cutout at the bottom */
+}
+
+.container {
+    overflow-y: visible !important; /* Prevent the container from implicitly clipping vertical overflow */
+}
+
