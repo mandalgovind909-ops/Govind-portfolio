@@ -2545,3 +2545,49 @@ h1, h2, h3, h4, h5, h6, p, a, span {
     overflow-y: visible !important; /* Prevent the container from implicitly clipping vertical overflow */
 }
 
+
+/* ==========================================================================
+   Mobile Header Overlap Fix
+   ========================================================================== */
+/* Ensure anchor scrolling accounts for the 80px fixed header on desktop */
+html {
+    scroll-padding-top: 80px !important;
+}
+
+.section {
+    scroll-margin-top: 80px !important;
+}
+
+@media (max-width: 768px) {
+    /* Reduce navbar height on mobile by 20px */
+    .navbar {
+        height: 60px !important;
+    }
+
+    /* Adjust anchor scrolling offsets for the new 60px navbar */
+    html {
+        scroll-padding-top: 60px !important;
+    }
+    .section {
+        scroll-margin-top: 60px !important;
+    }
+
+    /* Push the main content down by 60px to clear the fixed navbar.
+       We apply this to all pages except the homepage (which has .hero). 
+       This ensures the first heading on About, Resume, Skills, etc., is fully visible. */
+    body:not(:has(.hero)) main {
+        padding-top: 60px !important;
+    }
+    
+    /* Fallback for older mobile browsers that do not support :has() */
+    @supports not selector(:has(*)) {
+        main {
+            padding-top: 60px !important;
+        }
+        main > .hero {
+            margin-top: -60px !important;
+            padding-top: 140px !important; /* Original 80px + 60px offset */
+        }
+    }
+}
+
