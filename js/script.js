@@ -137,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (isValid) {
-                // Simulate form submission
                 const submitBtn = contactForm.querySelector('button[type="submit"]');
                 const originalText = submitBtn.innerHTML;
                 
@@ -145,20 +144,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.innerHTML = 'Sending... <i data-lucide="loader-2" class="spin"></i>';
                 lucide.createIcons();
 
-                setTimeout(() => {
-                    formStatus.textContent = "Thank you! Your message has been sent successfully.";
-                    formStatus.className = "form-status success";
-                    contactForm.reset();
-                    
+                fetch("https://formsubmit.co/ajax/govindmandalgo7257@gmail.com", {
+                    method: "POST",
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: nameInput.value.trim(),
+                        email: emailInput.value.trim(),
+                        message: messageInput.value.trim(),
+                        _subject: "New Contact Form Submission from Portfolio"
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        formStatus.textContent = "Thank you! Your message has been sent successfully.";
+                        formStatus.className = "form-status success";
+                        contactForm.reset();
+                    } else {
+                        formStatus.textContent = "Oops! Something went wrong. Please try again later.";
+                        formStatus.className = "form-status error";
+                    }
+                })
+                .catch(error => {
+                    formStatus.textContent = "Oops! Something went wrong. Please check your connection.";
+                    formStatus.className = "form-status error";
+                })
+                .finally(() => {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalText;
                     lucide.createIcons();
                     
-                    // Clear success message after 5 seconds
+                    // Clear status message after 5 seconds
                     setTimeout(() => {
                         formStatus.textContent = "";
+                        formStatus.className = "form-status";
                     }, 5000);
-                }, 1500);
+                });
             } else {
                 formStatus.textContent = "Please fill out all required fields correctly.";
                 formStatus.className = "form-status error";
